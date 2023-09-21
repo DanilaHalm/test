@@ -8,8 +8,9 @@ export async function generateStaticParams() {
    },
     next: { revalidate : 10 }
  });
- const { results } = await res.json()
-  const a = [{"gallery":"1"},{"gallery":"2"},{"gallery":"3"}]
+  const { results } = await res.json()
+  const galleryData = JSON.stringify(results)
+  const a = [{"gallery": galleryData }]
   return a
 }
 
