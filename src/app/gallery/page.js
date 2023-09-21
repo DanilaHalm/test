@@ -8,3 +8,5 @@ const Gallery = async () => {
     <main> {items?.length} </main>
   )
 }
+
+export default Gallery
