@@ -11,7 +11,7 @@ export async function generateStaticParams() {
  const { results } = await res.json()
   const a = [{1:"1"},{2:"2"},{3:"3"}]
   return results.map(it=> {
-    slug: results
+    gallery: results
   })
 }
 
