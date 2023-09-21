@@ -1,6 +1,13 @@
 import getGalleryAlbums from "@/app/api/getGalleryAlbums"
 
-const Gallery = async () => {
+export async function generateStaticParams() {
+  const posts = ["1","2","3"]
+ 
+  return posts
+}
+
+const Gallery = async ({params}) => {
+  alert(params)
   const res = await fetch("https://parseapi.back4app.com/classes/galleryTest", {
     method: "GET",
     headers: {
