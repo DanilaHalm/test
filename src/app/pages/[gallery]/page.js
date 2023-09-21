@@ -9,8 +9,8 @@ export async function generateStaticParams() {
     next: { revalidate : 10 }
   });
   const { results } = await res.json()
- 
-  return results.map(item=> {
+  const a = ["1","2","3"]
+  return a.map(item=> {
     slug: item
   })
 }
