@@ -3,7 +3,7 @@ export async function generateStaticParams() {
   return a
 }
 
-const Layout = ({children})=>{
+const Layout = async ({children})=>{
   const res = await fetch("https://parseapi.back4app.com/classes/galleryTest", {
     method: "GET",
     headers: {
