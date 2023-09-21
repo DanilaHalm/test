@@ -15,7 +15,7 @@ export async function generateStaticParams() {
   })
 }
 
-const Gallery = async ({params}) => {
+const Gallery = ({params}) => {
   
   //const res = await fetch("https://parseapi.back4app.com/classes/galleryTest", {
    // method: "GET",
