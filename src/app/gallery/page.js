@@ -18,12 +18,12 @@ const Gallery = async ({params}) => {
     next: { revalidate : 10 }
   });
   const { results } = await res.json();
-
+  const items = JSON.stringify(params)
   
   
   return (
     <main> {results?.length} 
-  <div>{params}</div>
+  <div>{items}</div>
   </main>
   )
 }
