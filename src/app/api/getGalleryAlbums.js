@@ -6,10 +6,10 @@ const getGalleryAlbums = async () => {
       "X-Parse-REST-API-Key": "vEa4z74M4ZXql3x3QtujV9sgLnGBcWNULRPh1itf",
       "content-type": "application/json",
     },
-    next: { revalidate : 10},
+    
   });
   const { results } = await res.json();
   return results;
 };
-
+export const revalidate = 10
 export default getGalleryAlbums;
