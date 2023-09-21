@@ -7,7 +7,7 @@ export async function generateStaticParams() {
 }
 
 const Gallery = async ({params}) => {
-  alert(params)
+  
   const res = await fetch("https://parseapi.back4app.com/classes/galleryTest", {
     method: "GET",
     headers: {
@@ -22,7 +22,9 @@ const Gallery = async ({params}) => {
   
   
   return (
-    <main> {results?.length} </main>
+    <main> {results?.length} 
+  <div>{params}</div>
+  </main>
   )
 }
 
