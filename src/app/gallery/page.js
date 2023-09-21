@@ -1,7 +1,7 @@
 import getGalleryAlbums from "@/app/api/getGalleryAlbums"
 
 const Gallery = async () => {
-  const items = await fetch("https://parseapi.back4app.com/classes/galleryTest", {
+  const res = await fetch("https://parseapi.back4app.com/classes/galleryTest", {
     method: "GET",
     headers: {
       "X-Parse-Application-Id": "M7ajsoUJdW6shmY2c3zZtGlbvUvh8ejuq62mnkT2",
@@ -11,12 +11,11 @@ const Gallery = async () => {
     next: { revalidate : 10 }
   });
   const { results } = await res.json();
-  return results;
-};
+
   
   
   return (
-    <main> {items?.length} </main>
+    <main> {results?.length} </main>
   )
 }
 
