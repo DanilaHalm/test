@@ -10,7 +10,9 @@ export async function generateStaticParams() {
   });
   const { results } = await res.json()
  
-  return results
+  return results.map(item=> {
+    slug: item
+  })
 }
 
 const Gallery = async ({params}) => {
