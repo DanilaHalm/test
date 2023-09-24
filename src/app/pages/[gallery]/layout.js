@@ -5,7 +5,7 @@ const Layout = async ({children})=>{
 
   return (
     <main>
-    {children data={results}}
+    {children}
     </main>
   )
 }
