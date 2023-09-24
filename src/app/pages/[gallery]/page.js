@@ -1,5 +1,5 @@
 export async function generateStaticParams (){
-  const a = [{"gallery":1}]
+  const a = [{"gallery":"1"}]
   return a
 }
 
