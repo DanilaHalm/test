@@ -1,4 +1,7 @@
-
+export async function generateStaticParams (){
+  const a = [{"gallery":1}]
+  return a
+}
 
 const Gallery = () => {
   
