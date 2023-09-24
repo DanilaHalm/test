@@ -1,6 +1,6 @@
 
 
-const Gallery = ({params,data}) => {
+const Gallery = () => {
   
   //const res = await fetch("https://parseapi.back4app.com/classes/galleryTest", {
    // method: "GET",
@@ -13,16 +13,14 @@ const Gallery = ({params,data}) => {
   //});
   //const { results } = await res.json();
   
-  const x = JSON.stringify(params)
-  const s = JSON.stringify(data)
+  
   
   return (
-    <main> 
+    
   <div>
-    {x}
+    
     </div>
-    <div>{s}</div>
-  </main>
+
   )
 }
 
