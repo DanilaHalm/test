@@ -1,4 +1,5 @@
 import getGalleryAlbums from "@/app/api/getGalleryAlbums"
+
 import Link from "next/link";
 
 export const revalidate= 10
