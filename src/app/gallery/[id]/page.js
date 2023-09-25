@@ -2,11 +2,11 @@ import getGalleryAlbums from "@/app/api/getGalleryAlbums"
 
 export const revalidate= 10
 
-export const generateStaticParams= async () {
+export async function generateStaticParams() {
   const results = await getGalleryAlbums();
-  return results.map(item=>{
+  return results.map((item)=>({
     id : item.objectId
-  })
+  }))
 }
 
 const GalleryItem = async ({params}) => {
