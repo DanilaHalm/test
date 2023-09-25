@@ -21,7 +21,7 @@ const Gallery = async () => {
   return (
     <main> 
   <div className="flex flex-col">{results?.map(item=> {
-    return (<Link href={`/gallery/${id}`}>
+    return (<Link href={`/gallery/${item.objectId}`}>
                     {item.title}
                     </Link>)
   })}</div>
