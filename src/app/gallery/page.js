@@ -2,7 +2,7 @@ import getGalleryAlbums from "@/app/api/getGalleryAlbums"
 
 import Link from "next/link";
 
-export const revalidate= 10
+export const revalidate= 300
 
 const Gallery = async () => {
   
