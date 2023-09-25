@@ -1,4 +1,5 @@
 import getGalleryAlbums from "@/app/api/getGalleryAlbums"
+import Link from "next/link";
 
 export const revalidate= 10
 
@@ -19,7 +20,11 @@ const Gallery = async () => {
   
   return (
     <main> 
-  <div>{results?.length}</div>
+  <div className="flex flex-col">{results?.map(item=> {
+    return (<Link href={`/gallery/${id}`}>
+                    {item.title}
+                    </Link>)
+  })}</div>
   </main>
   )
 }
