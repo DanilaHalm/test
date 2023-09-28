@@ -1,5 +1,5 @@
 import getGalleryAlbums from "@/app/api/getGalleryAlbums"
-
+import { notFound } from 'next/navigation'
 export const revalidate= 10
 
 //export async function generateStaticParams() {
@@ -25,7 +25,7 @@ const GalleryItem = async ({params}) => {
  // const items = JSON.stringify(params)
   const idExists = results.map(item=> item.objectId).includes(id)
   if(!idExists){
-    return <main>404 {id}</main>
+    notFound()
   }
   return (
     <main> 
