@@ -21,7 +21,7 @@ const GalleryItem = async ({params}) => {
     
   });
   const  {results} = await res.json();
-  
+  const item = results.find(it=> it.objectId === id)
  // const items = JSON.stringify(params)
   const idExists = results.map(item=> item.objectId).includes(id)
   if(!idExists){
@@ -29,7 +29,7 @@ const GalleryItem = async ({params}) => {
   }
   return (
     <main> 
-  <div>{result?.title}</div>
+  <div>{item.title}</div>
   </main>
   )
 }
