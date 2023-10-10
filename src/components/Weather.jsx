@@ -9,7 +9,7 @@ const Weather = async () => {
   const location = data?.location.name
   const temp = data?.current.temp_c
   const condition= data?.current.condition.text
-  const wind = data?.current.wind_kph
+  const wind = Math.round(data?.current.wind_kph * 1000 / 3600)
   
   
   return (
@@ -17,7 +17,7 @@ const Weather = async () => {
     <h1>{location}</h1>
     <p>temperature: {temp} °C</p>
     <p>condition: {condition} </p>
-    <p>wind: {wind} km/h </p>
+    <p>wind: {wind} m/s </p>
     </div>
   )
 }
