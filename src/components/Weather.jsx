@@ -12,13 +12,13 @@ const Weather = async () => {
   const wind = data?.current.wind_kph
   
   
-  return {
+  return (
     <div>
     <h1>{location}</h1>
     <p>temperature: {temp} °C</p>
     <p>condition: {condition} </p>
     <p>wind: {wind} km/h </p>
     </div>
-  }
+  )
 }
 export default Weather 
