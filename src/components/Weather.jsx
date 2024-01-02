@@ -2,7 +2,7 @@
 const Weather = async () => {
   const baseUrl = "http://api.weatherapi.com/v1/current.json?"
   const apiKey = "58f433ea3730490c911225705231010"
-  const city = "Novolukoml"
+  const city = "54.656933,29.141096"
   const res = await fetch(`${baseUrl}key=${apiKey}&q=${city}&aqi=no`)
   const data = await res.json()
 
